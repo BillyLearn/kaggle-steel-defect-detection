@@ -128,10 +128,10 @@ def run_train():
 
     ## optimiser ----------------------------------
     # optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, net.parameters()),lr=schduler(0))
-    #optimizer = torch.optim.RMSprop(net.parameters(), lr =0.0005, alpha = 0.95)
-    # optimizer = torch.optim.SGD(filter(lambda p: p.requires_grad, net.parameters()), lr=schduler(0), momentum=0.9, weight_decay=0.0001)
+    # optimizer = torch.optim.RMSprop(net.parameters(), lr =0.0005, alpha = 0.95)
+    # optimizer = RAdam(filter(lambda p: p.requires_grad, net.parameters()),lr=schduler(0))
+    optimizer = torch.optim.SGD(filter(lambda p: p.requires_grad, net.parameters()), lr=schduler(0), momentum=0.9, weight_decay=0.0001)
 
-    optimizer = RAdam(filter(lambda p: p.requires_grad, net.parameters()),lr=schduler(0))
 
     ## load model ------------------------------------------------------------------------
     if INITIAL_CHECKPOINT is not None:

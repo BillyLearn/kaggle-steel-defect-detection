@@ -1,13 +1,5 @@
 ## classification 文件夹：训练Resnet34 模型作为分类器
 
-我的pytorch GPU 相关运行配置：
-
-> torch.\_\_version\_\_                             = 1.1.0
-> torch.version.cuda             			 = 10.0.130
-> torch.backends.cudnn.version()   = 7501
-> os['CUDA_VISIBLE_DEVICES']     	= 0
-> torch.cuda.device_count()      		= 1
-
 
 
 训练之前，请确定:
@@ -23,7 +15,7 @@
 
    > python train.py
 
-## segmentation文件夹: 训练 Efficientnet B5 作为分割器 
+## segmentation文件夹: 训练 Efficientnet B5 作为分割器
 
 ## input 文件夹: 数据集，预训练模型，模型保存等相关文件
 
